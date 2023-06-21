@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create Your Account</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        {% for message in messages %}
+            <h5 class="error">{{message}}</h5>
+        {% endfor %}
+        <div class="center">
+            <header class="margin">
+                <h1>Criar Conta</h1>
+            </header>
+            <form class="margin" method="post" action="register">
+                {% csrf_token %}
+                <div class="margin"> 
+                    <label for="username" class="label">Nome de Utilizador: </label>
+                    <input name="username" type="text"/>
+                </div>
+                <br/>
+                <div class="margin">
+                    <label for="email" class="label">E-mail: </label>
+                    <input name="email" type="email"/>
+                </div>
+                <br/>
+                <div class="margin">
+                    <label for="password" class="label">Palavra-Passe: </label>
+                    <input name="password" type="password"/>
+                </div>
+                <br/>
+                <div class="margin">
+                    <label for="password-confirm" class="label">Confirmar Palavra-Passe: </label>
+                    <input name="password-confirm" type="password"/>
+                </div>
+                <br/>
+                <input type="submit" value="Criar"/>
+            </form>
+        </div>
+    </body>
+</html>

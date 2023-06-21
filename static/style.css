@@ -1,0 +1,22 @@
+.center {
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+    padding: 30px;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.label {
+    margin-right: 30px;
+}
+
+.error {
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+}
