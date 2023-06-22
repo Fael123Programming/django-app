@@ -61,3 +61,18 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+
+def post_list(request):
+    posts = ["Mark", "Henderson", "Luke", "Ana"]
+    context = {
+        "posts": posts
+    }
+    return render(request, 'post_list.html', context)
+
+    
+def post(request, pk):
+    context = {
+        "pk": pk
+    }
+    return render(request, 'post.html', context)

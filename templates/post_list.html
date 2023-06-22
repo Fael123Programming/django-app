@@ -1,0 +1,11 @@
+<header>
+    <h1>Post List</h1>
+</header>
+
+<div>
+    <ul>
+        {% for post in posts %}
+            <li><a href="{% url 'post' post %}">{{post}}'s Post</a></li>
+        {% endfor %}
+    </ul>
+</div>
